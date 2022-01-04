@@ -1,5 +1,6 @@
 
 import './App.css';
+import '../src/Styles/Base.css';
 
 function App() {
   return (

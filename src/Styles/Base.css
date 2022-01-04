@@ -1,0 +1,18 @@
+/* import fontstyle : Noto+Sans  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  /* Base Variables :  */
+  --blue: #0058ab;
+  --yellow: #faeb26;
+  --white: #ffffff;
+  --black: #000000;
+  --paragraph: 14px;
+  --title: 25px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--yellow);
+}
