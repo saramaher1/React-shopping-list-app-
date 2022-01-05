@@ -14,5 +14,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans", sans-serif;
-  background-color: var(--yellow);
+}
+/* header in homePage */
+.item1 {
+  grid-area: header;
+}
+/* the main page in homePage */
+.item2 {
+  grid-area: main;
+}
+.grid-container {
+  display: grid;
+
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
