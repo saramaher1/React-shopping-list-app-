@@ -1,9 +1,9 @@
 import React from 'react';
-import '../src/Styles/Base.css';
-import '../src/Styles/NavBarStyle.css';
+import '../src/styles/Base.css';
+import '../src/styles/NavBarStyle.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from "../src/Pages/HomePage";
-import ShoppingListPage from "../src/Pages/ShoppingListPage";
+import HomePage from "./pages/HomePage";
+import ShoppingListPage from "./pages/ShoppingListPage";
 
 
 function App() {

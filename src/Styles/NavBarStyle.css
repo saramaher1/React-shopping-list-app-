@@ -30,3 +30,9 @@ nav a:hover {
   background: black;
   color: white;
 }
+
+.logo {
+  width: 70px;
+  height: 40px;
+  padding-top: 16px;
+}

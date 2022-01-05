@@ -1,6 +1,6 @@
 import React from 'react';
 import homePageImage from "../Assets/Images/Lady.png";
-import NavBar from "../Components/NavBar";
+import NavBar from "../components/NavBar";
 
 const HomePage = () => (
     
@@ -9,11 +9,11 @@ const HomePage = () => (
        <NavBar/>
      </div>
      <div className="item2">
-       <img src={homePageImage} alt="homepagePicture" /> 
+       <img className="homePageImage" src={homePageImage} alt="homepagePicture" /> 
      </div>
       
-      </div>
-    
+  </div>
+     
 );
 
 export default HomePage;
