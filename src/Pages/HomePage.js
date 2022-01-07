@@ -5,11 +5,14 @@ import NavBar from "../components/NavBar";
 const HomePage = () => (
     
   <div className ="grid-container">
-     <div className="item1">
+     <div className="Header">
        <NavBar/>
      </div>
-     <div className="item2">
-       <img className="homePageImage" src={homePageImage} alt="homepagePicture" /> 
+     <div className="Main">
+       <img className="homePageImage" src={homePageImage} alt="homepagePicture"  /> 
+       <p>
+           hi this is my project 
+       </p>
      </div>
       
   </div>

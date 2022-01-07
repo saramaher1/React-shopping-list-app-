@@ -16,11 +16,11 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 /* header in homePage */
-.item1 {
+.Header {
   grid-area: header;
 }
 /* the main page in homePage */
-.item2 {
+.Main {
   grid-area: main;
 }
 .grid-container {
@@ -28,7 +28,7 @@ body {
 
   grid-template-areas:
     "header header header header header header"
-    "menu main main main main right"
+    "main main main main main main"
     "menu footer footer footer footer footer";
 }
 .grid-container > div {
@@ -37,5 +37,5 @@ body {
 
 /* Styling HomePage  */
 .homePageImage {
-  height: 100 px;
+  height: 500 px;
 }
