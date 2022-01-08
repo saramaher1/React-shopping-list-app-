@@ -1,13 +1,18 @@
-import React , {useState} from "react";
-import AddItem from "../components/AddItems";
-const ShoppingListPage = () => (
-
+import React from "react";
+import AddItems from "../components/AddItems";
+import NavBar from "../components/NavBar";
+const  ShoppingListPage = () => {
+ 
+return( 
 <div className ="grid-container">
      <div className="Header">
-       <AddItem/>
-    </div>
+          <NavBar />
+     </div>
+     <div className="Main">
+         <AddItems/>
+     </div>
 </div>
-      
-
 );
+}
+
 export default ShoppingListPage;

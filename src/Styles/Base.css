@@ -39,3 +39,6 @@ body {
 .homePageImage {
   height: 500 px;
 }
+#item-list {
+  margin-top: 300px;
+}
