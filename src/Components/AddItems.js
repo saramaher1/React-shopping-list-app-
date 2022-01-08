@@ -55,11 +55,11 @@ const AddItems = () => {
         const { value: formValues } = await Swal.fire({
           title: 'Please Enter your Item and Price',
           html:
-            '<input id="swal-input1" class="swal2-input">' +
-            '<input id="swal-input2" class="swal2-input">',
-          focusConfirm: false,
+            '<input id="swal-input1" class="swal2-input"   placeholder="Enter the items">' +
+            '<input id="swal-input2" class="swal2-input"  placeholder="Enter the Price in Kr ">',
+         
           preConfirm: () => {
-
+                       
             const newitem = {
                 id: new Date().getTime(),
                 text:document.getElementById('swal-input1').value,
@@ -68,39 +68,48 @@ const AddItems = () => {
               };
               setList([...list].concat(newitem));
               setItem("");
-          
-          }
 
+   
+}
         })
-        
-        if (formValues) {
-          Swal.fire(JSON.stringify(formValues))
-        }
-        
+        return Swal.fire("Thanks for adding new item")    
         })()
    }
 
 
     return (
-      <div id="item-list">
-        <h1>Shopping List</h1>
-        <form onSubmit={handleSubmit}>
-        <input
+      <div ClassName="container">
+<div className="AdditemsForm"> 
+
+
+
+         <form   onSubmit={handleSubmit} >
+           <span> 
+           
+        <input className="InputBox"
             type="text"
             placeholder="Enter the items"
             onChange={(e) => setItem(e.target.value)}
             value={item}
           />
-        <input
+          </span>
+          <span> 
+        
+        <input className="InputBox"
             type="text"
             placeholder="Enter Price kr"
             onChange={(e) => setItemPrice(e.target.value)}
             value={itemPrice}
           />
-          <button type="submit" >Add item</button>
-          <button onClick={() => onclickhadler(item,itemPrice)} >Add item</button>
-         
+          </span>
+          
+          <button  type="submit" >Add item</button>
+          {/* <button onClick={() => onclickhadler()} >Add item</button> */}
+    
         </form>
+        </div>
+        <div> 
+
         {list.map((item) => (
           <div key={item.id} className="item">
             <div className="item-text">
@@ -124,6 +133,9 @@ const AddItems = () => {
           </div>
         ))}
       </div>
+      
+      </div>
+      
     );
   };
 export default AddItems;

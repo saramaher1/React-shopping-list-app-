@@ -1,9 +1,10 @@
 /* import fontstyle : Noto+Sans  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
   /* Base Variables :  */
   --blue: #0058ab;
-  --yellow: #faeb26;
+  --yellow: #fbd914;
   --white: #ffffff;
   --black: #000000;
   --paragraph: 14px;
@@ -11,34 +12,92 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Noto Sans", sans-serif;
 }
 /* header in homePage */
-.Header {
-  grid-area: header;
-}
-/* the main page in homePage */
-.Main {
-  grid-area: main;
-}
-.grid-container {
-  display: grid;
-
-  grid-template-areas:
-    "header header header header header header"
-    "main main main main main main"
-    "menu footer footer footer footer footer";
-}
-.grid-container > div {
-  text-align: center;
-}
 
 /* Styling HomePage  */
 .homePageImage {
-  height: 500 px;
+  height: 600px;
 }
-#item-list {
-  margin-top: 300px;
+body {
+  background: linear-gradient(45deg, var(--gray), var(--white));
+  height: 100vh;
+}
+/* Styling Shoppinglistpage */
+/* styling form :  */
+
+.AdditemsForm {
+  text-align: center;
+  padding: 20px;
+}
+.InputBox {
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid Gray;
+  padding: 6px;
+  margin-left: 4px;
+
+  width: 230px;
+  backgrouolor: var(nd-c--blue);
+}
+container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+form {
+  background: var(--yellow);
+  padding: 1em;
+  height: 30px;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+}
+
+button {
+  font-size: 16px;
+  background-color: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--yellow);
+}
+button:active {
+  background-color: var(--yellow);
+}
+button:focus {
+  outline: 0;
+}
+input[type="text"] {
+  font-size: 20px;
+  font-family: monospace;
+}
+.item input[type="checkbox"] {
+  transform: scale(1.8) translateY(1px);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+}
+.item-text input {
+  padding: 4px;
+}
+.item-text {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
