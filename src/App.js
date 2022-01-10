@@ -1,6 +1,9 @@
 import React from 'react';
 import '../src/styles/Base.css';
 import '../src/styles/NavBarStyle.css';
+import '../src/styles/ResponsiveStyle.css';
+import '../src/styles/ButtonStyle.css';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import ShoppingListPage from "./pages/ShoppingListPage";
