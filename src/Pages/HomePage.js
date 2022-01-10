@@ -2,7 +2,7 @@ import React from 'react';
 import homePageImage from "../Assets/Images/Lady.png";
 import NavBar from "../components/NavBar";
 import { Link } from 'react-router-dom';
-import AddItems from '../components/AddItems';
+
 
 const HomePage = () => (
     

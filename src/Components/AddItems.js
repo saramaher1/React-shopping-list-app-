@@ -1,12 +1,8 @@
-import React ,{useState} from "react";
-import Swal from 'sweetalert2'
-
+import React  from "react";
 const AddItems = () => {
     const [list, setList] = React.useState([]);
     const [item, setItem] = React.useState("");
     const [itemPrice, setItemPrice] = React.useState("");
-   
-  
     React.useEffect(() => {
       const json = localStorage.getItem("list");
       const loadedlist = JSON.parse(json);
@@ -14,7 +10,6 @@ const AddItems = () => {
         setList(loadedlist);
       }
     }, []);
-  
     React.useEffect(() => {
       const json = JSON.stringify(list);
       localStorage.setItem("list", json);
@@ -22,7 +17,6 @@ const AddItems = () => {
   
     function handleSubmit(e) {
       e.preventDefault();
-  
       const newitem = {
         id: new Date().getTime(),
         text: item,
@@ -32,57 +26,33 @@ const AddItems = () => {
       setList([...list].concat(newitem));
       setItem("");
     }
-  
     function deleteitem(id) {
       let updatedList = [...list].filter((item) => item.id !== id);
       setList(updatedList);
     }
-  
     function toggleComplete(id) {
       let updatedList = [...list].map((item) => {
         if (item.id === id) {
           item.completed = !item.completed;
         }
-        return item;
+        return item.text;
       });
       setList(updatedList);
-
     }
-   function onclickhadler(){
-
-    (async () => {
-
-        const { value: formValues } = await Swal.fire({
-          title: 'Please Enter your Item and Price',
-          html:
-            '<input id="swal-input1" class="swal2-input"   placeholder="Enter the items">' +
-            '<input id="swal-input2" class="swal2-input"  placeholder="Enter the Price in Kr ">',
-         
-          preConfirm: () => {
-                       
-            const newitem = {
-                id: new Date().getTime(),
-                text:document.getElementById('swal-input1').value,
-                price:document.getElementById('swal-input2').value,
-                completed: false,
-              };
-              setList([...list].concat(newitem));
-              setItem("");
+  
+    
 
    
-}
-        })
-        return Swal.fire("Thanks for adding new item")    
-        })()
-   }
+ 
+    
+    
 
+   
 
     return (
-      <div ClassName="container">
-<div className="AdditemsForm"> 
-
-
-
+      <div className="container">
+        
+        <div className="AdditemsForm"> 
          <form   onSubmit={handleSubmit} >
            <span> 
            
@@ -104,31 +74,31 @@ const AddItems = () => {
           </span>
           
           <button  type="submit" >Add item</button>
-          {/* <button onClick={() => onclickhadler()} >Add item</button> */}
-    
+          
         </form>
         </div>
-        <div> 
-
+        
+        <div className="listContainer" > 
+        <p className="shoppingListParagraph"> My Shopping List : </p>
         {list.map((item) => (
-          <div key={item.id} className="item">
+          <div  key={item.id} className="item">
+            
             <div className="item-text">
-              <input
-                type="checkbox"
-                id="completed"
-                checked={item.completed}
-                onChange={() => toggleComplete(item.id)}
-              />
-                <div>
-                    {item.text}
-                    {item.price}
-                </div>
-              
+                <span> 
+                  <input
+                   type="checkbox"
+                    id="completed"
+                    checked={item.completed}
+                     onChange={() => toggleComplete(item.id)}
+                    />
+                </span>
+                <span> {item.text} , </span>
+                <span>{item.price}kr</span>
+
             </div>
             <div className="item-actions">
-              <button onClick={() => deleteitem(item.id)}>Delete</button>
-              
-              
+              <button onClick={() => deleteitem(item.id)}>Delete</button>  
+          
             </div>
           </div>
         ))}
