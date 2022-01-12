@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => (
     
-  <div className ="grid-container " >
+  <div className ="grid-container" >
      <div className="Header">
        <NavBar/>
      </div>
