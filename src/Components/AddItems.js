@@ -1,9 +1,9 @@
 import React  from "react";
 const AddItems = () => {
     const [list, setList] = React.useState([]);
-    const [Completedlist, setCompletedlist] = React.useState([]);
     const [item, setItem] = React.useState("");
     const [itemPrice, setItemPrice] = React.useState("");
+    const [show,setShow]=React.useState(true);
     React.useEffect(() => {
       const json = localStorage.getItem("list");
       const loadedlist = JSON.parse(json);
@@ -41,14 +41,14 @@ const AddItems = () => {
       setList(updatedList);
     }
   
-   function ShowCompletedList(){
-
-    <ul className="list-group">
-  {list.map(item => (
-    <li key={item.id} className="list-group-item">
-      {`${item.text}`}
-    </li>))}
-</ul>
+   function ShowCompletedList(){     
+<ul className="list-group">  
+   {list.map(item => (
+   ( item.completed)? 
+     <li key={item.id} className="list-group-item">
+       {`${item.text}`}
+     </li> :null))}
+ </ul>
    }
     
 
@@ -77,7 +77,6 @@ const AddItems = () => {
             value={itemPrice}
           />
           </span>
-          
           <button  type="submit" >Add item</button>
            
         </form>
@@ -114,24 +113,28 @@ const AddItems = () => {
         ))}
       </div>
 <div>
- 
+
 </div>
-      <div className= "listContainer">
-    Completed Items : 
-<div>
+<button onClick={()=>setShow(!show)} >Show</button>
+     
+<div  >
+  {
+show ?
+<div className="listContainer" > 
 <ul className="list-group">  
-   
-  {list.map(item => (
-  ( item.completed)? 
-    <li key={item.id} className="list-group-item">
-      {`${item.text}`}
-    </li> :null))}
-</ul>
+   {list.map(item => (
+   ( item.completed)? 
+     <li key={item.id} className="list-group-item">
+       {`${item.text}`}
+     </li> :null))}
+ </ul>
+ </div>
+:null
+
+}
 </div>
-      </div>
-      
-      </div>
-      
+
+ </div>     
     );
   };
 export default AddItems;
