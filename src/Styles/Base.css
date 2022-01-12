@@ -95,7 +95,8 @@ input[type="text"] {
 }
 .item-actions {
   text-align: right;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 .item {
   margin-left: 3px;

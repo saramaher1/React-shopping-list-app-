@@ -1,6 +1,7 @@
 import React  from "react";
 const AddItems = () => {
     const [list, setList] = React.useState([]);
+    const [Completedlist, setCompletedlist] = React.useState([]);
     const [item, setItem] = React.useState("");
     const [itemPrice, setItemPrice] = React.useState("");
     React.useEffect(() => {
@@ -35,16 +36,20 @@ const AddItems = () => {
         if (item.id === id) {
           item.completed = !item.completed;
         }
-        return item.text;
+        return item;
       });
       setList(updatedList);
     }
   
-    
+   function ShowCompletedList(){
 
-   
- 
-    
+    <ul className="list-group">
+  {list.map(item => (
+    <li key={item.id} className="list-group-item">
+      {`${item.text}`}
+    </li>))}
+</ul>
+   }
     
 
    
@@ -74,13 +79,15 @@ const AddItems = () => {
           </span>
           
           <button  type="submit" >Add item</button>
-          
+           
         </form>
+         
         </div>
         
         <div className="listContainer" > 
         <p className="shoppingListParagraph"> My Shopping List : </p>
         {list.map((item) => (
+          
           <div  key={item.id} className="item">
             
             <div className="item-text">
@@ -93,15 +100,34 @@ const AddItems = () => {
                     />
                 </span>
                 <span> {item.text} , </span>
-                <span>{item.price}kr</span>
-
-            </div>
-            <div className="item-actions">
-              <button onClick={() => deleteitem(item.id)}>Delete</button>  
+                <span>Price:  {item.price}kr</span>
+                
+              
           
             </div>
+           <div className="item-actions">
+              <button onClick={() => deleteitem(item.id)}>Delete</button>  
+              
+          
+            </div> 
           </div>
         ))}
+      </div>
+<div>
+ 
+</div>
+      <div className= "listContainer">
+    Completed Items : 
+<div>
+<ul className="list-group">  
+   
+  {list.map(item => (
+  ( item.completed)? 
+    <li key={item.id} className="list-group-item">
+      {`${item.text}`}
+    </li> :null))}
+</ul>
+</div>
       </div>
       
       </div>
