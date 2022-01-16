@@ -1,13 +1,16 @@
-import React  from "react";
+import React ,{useState}  from "react";
 import CompletedItems from "./CompletedItems";
 import Swal from 'sweetalert2';
 import alertPic from "../Assets/Images/alertPic.png";
-
+import { storage } from "../firebase";
 
 const AddItems = () => {
      const [list, setList] = React.useState([]);
      const [item, setItem] = React.useState("");
      const [itemPrice, setItemPrice] = React.useState("");
+     const [file, setFile] = useState(null);
+     const [url, setURL] = useState("");
+
 
      React.useEffect(() => {
        const json = localStorage.getItem("list");
@@ -33,12 +36,14 @@ function AlertHandler() {
       })
     }
      function handleSubmit(e) {
+      
        e.preventDefault();
        const newitem = {
          id: new Date().getTime(),
          text: item,
          price:itemPrice,
          completed: false,
+         Image:url,
        };
        setList([...list].concat(newitem));
        setItem("");
@@ -61,12 +66,34 @@ function AlertHandler() {
        setList(updatedList);
      }
 
+     // handling upload picture functions : 
+     function handleChange(e) {
+      setFile(e.target.files[0]);
+    }
+  
+    function handleUpload(e) {
+      e.preventDefault();
+      const ref = storage.ref(`/images/${file.name}`);
+      const uploadTask = ref.put(file);
+      uploadTask.on("state_changed", console.log, console.error, () => {
+        ref
+          .getDownloadURL()
+          .then((url) => {
+            setFile(null);
+            setURL(url);
+          });
+      });
+
+      handleSubmit(e);
+    
+    }
+ 
      
 
      return (
        <div className="container">
          <div className="AdditemsForm"> 
-          <form onSubmit={handleSubmit} >
+          <form className="Form" onSubmit={  handleUpload} >
             <span> 
               <input
                  className="InputBox"
@@ -81,7 +108,10 @@ function AlertHandler() {
              onChange={(e) => setItemPrice(e.target.value)}
              value={itemPrice} />
            </span>
-           <button  type="submit" >Add item </button>      
+         <span>
+         <input type="file" id="file"  onChange={handleChange} />
+         </span>
+           <button  disabled={!file} type="submit" >Add item </button>      
          </form>
          </div>
          
@@ -97,7 +127,8 @@ function AlertHandler() {
                      checked={item.completed}
                       onChange={() => toggleComplete(item.id)}/>
                  </span>
-                 <span> {item.text} , </span>
+                 <span ><img className="itemImage" src={item.Image} alt="icon"/> </span>
+                 <span> {item.text}  </span>
                  <span>Price:  {item.price} kr</span>
              </div>
  
@@ -110,6 +141,8 @@ function AlertHandler() {
  <div>
  </div>
  <CompletedItems completedItems={list}  />
+
+ 
   
   <div>
   

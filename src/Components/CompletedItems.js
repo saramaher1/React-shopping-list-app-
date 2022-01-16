@@ -11,7 +11,11 @@ const CompletedItems = ({completedItems}) => {
                     <ul className="list-group">  
                        {
                          completedItems.map(item => (( item.completed)? 
-                         <li key={item.id} className="list-group-item"> {`${item.text}`}</li> 
+                         <li key={item.id} className="list-group-item">
+                         <img className="itemImage" src={item.Image} alt="url"/>
+                         {`${item.text}` }
+            
+                         </li> 
                          :null))}
                      </ul>
                      </div>

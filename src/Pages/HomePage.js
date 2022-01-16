@@ -16,7 +16,7 @@ const HomePage = () => (
        </p>
 
        <Link to="/shoppinglist"><button>Click me</button></Link>
-       <UploadPicture/>
+   
      </div>
       
   </div>

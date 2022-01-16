@@ -26,7 +26,7 @@ export default function UploadPicture() {
   return (
     <div>
       <form onSubmit={handleUpload}>
-        <input type="file" onChange={handleChange} />
+        <input type="file" id="file" name="Choose Image" onChange={handleChange} />
         <button disabled={!file}>upload </button>
       </form>
       <img src={url} alt="" />
