@@ -5,7 +5,7 @@ const CompletedItems = ({completedItems}) => {
 
      return (
         <div>
-            <button disabled={completedItems.filter(item=>item.completed).length===0} onClick={()=>setShow(!show)} >Show</button>
+            <button disabled={completedItems.filter(item=>item.completed).length===0} onClick={()=>setShow(!show)} >Show Completed Items</button>
             { show ?
                <div className="listContainer" > 
                     <ul className="list-group">  

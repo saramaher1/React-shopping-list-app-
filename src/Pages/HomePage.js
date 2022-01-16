@@ -2,10 +2,9 @@ import React from 'react';
 import homePageImage from "../Assets/Images/Lady.png";
 import NavBar from "../components/NavBar";
 import { Link } from 'react-router-dom';
-
-
+import UploadPicture from "../components/UploadPicture";
 const HomePage = () => (
-    
+ 
   <div className ="grid-container" >
      <div className="Header">
        <NavBar/>
@@ -17,6 +16,7 @@ const HomePage = () => (
        </p>
 
        <Link to="/shoppinglist"><button>Click me</button></Link>
+       <UploadPicture/>
      </div>
       
   </div>
