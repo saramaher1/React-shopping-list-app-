@@ -1,23 +1,31 @@
 import React from 'react';
-import homePageImage from "../Assets/Images/Lady.png";
+import twoLady from "../Assets/Images/twoLady.png";
+import ladyPointing from "../Assets/Images/ladyPointing1.png";
 import NavBar from "../components/NavBar";
 import { Link } from 'react-router-dom';
 import UploadPicture from "../components/UploadPicture";
 const HomePage = () => (
  
-  <div className ="grid-container" >
-     <div className="Header">
-       <NavBar/>
+  <div  >
+     <div >
+         <NavBar/>
      </div>
-     <div className="Main">
-        <img className="homePageImage" src={homePageImage} alt="homepagePicture"  />  *
-       <p>
-           hi this is my project 
-       </p>
+     <div className="listContainer">
+        <div className="homePageParagraph"> 
+          <p>My Shopping List App </p>
+           <p> Smart Way of Organizing your Shopping Items with "My Shopping List App" ,
+           Try it now !! 
+           </p>
+         </div>
+      
 
-       <Link to="/shoppinglist"><button>Click me</button></Link>
-   
-     </div>
+        <div >
+         <Link className="clickMe" to="/shoppinglist"><button>Click me</button></Link>
+        </div>
+        <div><img  className="homePageImage" src={ladyPointing} alt="homepagePicture"  /> 
+        </div>
+
+      </div>
       
   </div>
      

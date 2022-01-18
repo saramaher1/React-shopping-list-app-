@@ -1,22 +1,16 @@
 @media screen and (min-width: 1000px) {
-  form {
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 100px;
-    background-color: red;
-  }
-  .listContainer {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-  .InputBox {
-    width: 230px;
-  }
-  .AdditemsForm {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 350px) {
+  .container {
+    background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\nii-shu-ZpbtNpPG8_4-unsplash.png");
+  }
+  nav a {
+    padding: 5px 8px;
+  }
+  nav li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
   form {
     margin-top: 40px;
     height: 130px;
@@ -27,6 +21,6 @@
   .InputBox {
     text-align: center;
     margin-top: 3px;
-    width: 230px;
+    width: 220px;
   }
 }

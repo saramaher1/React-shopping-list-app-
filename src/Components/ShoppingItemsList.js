@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const ShoppingItemsList = (list,setList)=>{
+const ShoppingItemsList = ({list,setList})=>{
     
     function deleteitem(id) {
         let updatedList = [...list].filter((item) => item.id !== id);

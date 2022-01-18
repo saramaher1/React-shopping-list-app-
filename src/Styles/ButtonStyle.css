@@ -1,18 +1,38 @@
 button {
-  font-size: 16px;
-  background-color: var(--blue);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: hsla(201, 100%, 50%, 0.1);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  color: white;
+  font-weight: lighter;
+  margin-top: 20px;
   cursor: pointer;
 }
+
 button:hover {
-  background-color: var(--yellow);
+  background-color: hsla(201, 100%, 50%, 0.3);
 }
-button:active {
-  background-color: var(--yellow);
-}
+
 button:focus {
-  outline: 0;
+  background-color: hsla(201, 100%, 50%, 0.5);
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: " 📷";
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 100%;
+  font-size: 40px;
+  margin-left: 100px;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input {
+  text-align: center;
 }

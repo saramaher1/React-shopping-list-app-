@@ -2,16 +2,18 @@ import React ,{useState}  from "react";
 import CompletedItems from "./CompletedItems";
 import Swal from 'sweetalert2';
 import alertPic from "../Assets/Images/alertPic.png";
-import { storage } from "../firebase";
+import additem from "../Assets/Images/additem .png";
 
+import { storage } from "../firebase";
+import { RiDeleteBin5Fill } from 'react-icons/ri';
+
+import logo from '../Assets/logo/logo.png';
 const AddItems = () => {
      const [list, setList] = React.useState([]);
      const [item, setItem] = React.useState("");
      const [itemPrice, setItemPrice] = React.useState("");
      const [file, setFile] = useState(null);
      const [url, setURL] = useState("");
-
-
      React.useEffect(() => {
        const json = localStorage.getItem("list");
        const loadedlist = JSON.parse(json);
@@ -83,42 +85,56 @@ function AlertHandler() {
             setURL(url);
           });
       });
-
-      handleSubmit(e);
-    
+  
     }
  
      
 
      return (
-       <div className="container">
-         <div className="AdditemsForm"> 
-          <form className="Form" onSubmit={  handleUpload} >
-            <span> 
-              <input
+      <div className="container">
+        
+          <div className="AdditemsForm"> 
+          
+           <form className="Form" onSubmit={  handleUpload} >
+            
+             <div>
+            {/* <h3 className="formTitile">My shopping List </h3> */}
+              <span> 
+               <input
                  className="InputBox"
-                 type="text" placeholder="Enter the items"
+                 type="text" 
+                 placeholder="Enter the items"
                  onChange={(e) => setItem(e.target.value)}
-                 value={item} /></span>
-                <span> 
+                 value={item} />
+              </span>
+             
+              <span> 
+                <input
+                 className="InputBox"
+                 type="number"
+                 placeholder="Enter Price kr"
+                 onChange={(e) => 
+                 setItemPrice(e.target.value)}
+                 value={itemPrice} />
+              </span>
 
-         <input className="InputBox"
-             type="number"
-             placeholder="Enter Price kr"
-             onChange={(e) => setItemPrice(e.target.value)}
-             value={itemPrice} />
-           </span>
-         <span>
-         <input type="file" id="file"  onChange={handleChange} />
-         </span>
-           <button  disabled={!file} type="submit" >Add item </button>      
-         </form>
-         </div>
-         
+              <div className="fileWarpper">
+              
+                     <input type="file" id="file" className="custom-file-input" onChange={handleChange} />
+              </div>
+
+             <div>
+               <button className="addItemIcon" color="var(--blue)" size={40} id="icons" disabled={!file} type="submit" onClick={handleSubmit} >Add Item</button>   
+              </div>
+              </div>
+
+            </form>
+      </div>
          <div className="listContainer"> 
-         <p className="shoppingListParagraph"> My Shopping List : </p>
-         {list.map((item) => (
-           <div key={item.id} className="item">
+         <h3 className="formTitile">My shopping List </h3>
+           <p className="shoppingListParagraph">  </p>
+           {list.map((item) => (
+            <div key={item.id} className="item">
              <div className="item-text">
                  <span> 
                    <input
@@ -128,26 +144,21 @@ function AlertHandler() {
                       onChange={() => toggleComplete(item.id)}/>
                  </span>
                  <span ><img className="itemImage" src={item.Image} alt="icon"/> </span>
-                 <span> {item.text}  </span>
-                 <span>Price:  {item.price} kr</span>
-             </div>
+                 <span>{item.text}</span>
+                 <span>Price:{item.price} </span>
+               </div>
  
-            <div className="item-actions">
-               <button onClick={() => deleteitem(item.id)}>Delete</button>  
+             <div className="item-actions">
+               <RiDeleteBin5Fill  onClick={() => deleteitem(item.id)}/> 
              </div> 
            </div>
-         ))}
-       </div>
- <div>
- </div>
- <CompletedItems completedItems={list}  />
+               ))}
+          </div>
 
- 
-  
-  <div>
-  
-  </div>
-  </div>     
+           <CompletedItems completedItems={list}  />
+        </div>     
+        
+
      );
 };
 

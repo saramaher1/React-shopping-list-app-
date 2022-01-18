@@ -1,11 +1,13 @@
 /* import fontstyle : Noto+Sans  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
   /* Base Variables :  */
   --blue: #0058ab;
   --yellow: #fbd914;
   --white: #ffffff;
+  --gray: #e3e3e3;
   --black: #000000;
   --paragraph: 14px;
   --title: 25px;
@@ -13,12 +15,23 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+  color: var(--white);
+  text-align: center;
+  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\augustine-wong-3Om4DHcaAc0-unsplash.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 /* header in homePage */
 
 /* Styling HomePage  */
+
 .homePageImage {
-  height: 600px;
+  text-align: center;
+  height: 300px;
+  width: 300;
+  margin-top: 100px;
 }
 
 .Header {
@@ -26,7 +39,6 @@ body {
 }
 /* the main page in homePage */
 .Main {
-  margin-top: 4em;
   grid-area: main;
 }
 .grid-container {
@@ -34,41 +46,61 @@ body {
   font-family: "Noto Sans", sans-serif;
   grid-template-areas:
     "header header header header header header"
-    "main main main main main main"
+    "main main main main main main "
     "footer footer footer footer footer footer";
 }
 .grid-container > div {
   text-align: center;
 }
-/* Styling Shoppinglistpage */
-/* styling form :  */
-
-.AdditemsForm {
-  text-align: center;
-  padding: 20px;
+.clickMe {
+  padding: 30px;
 }
-.InputBox {
+.clickMe button {
+  width: 300 px;
+}
+/* Styling Shoppinglistpage */
+.homePageParagraph {
+  margin-top: 50px;
+  font-size: var(--title);
+  text-align: center;
+}
+.homePageParagraph p {
+  padding-top: 50px;
+}
+
+.container {
+  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\nii-shu-ZpbtNpPG8_4-unsplash (1).png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.AdditemsForm {
+  background-color: hsla(201, 100%, 6%, 0.6);
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+.listContainer {
+  background-color: hsla(201, 100%, 6%, 0.6);
   text-align: center;
   border-radius: 25px;
-  border: 1px solid Gray;
-  padding: 6px;
-  margin-left: 4px;
-  width: 100px;
 }
-.Form {
-  background: var(--yellow);
-  padding: 1em;
-  height: 30px;
-  border-radius: 20px;
-  border-left: 1px solid $white;
-  border-top: 1px solid $white;
-  backdrop-filter: blur(10px);
+.InputBox {
+  background-color: hsl(200, 100%, 92%, 0.86);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: lighter;
   text-align: center;
-  margin-top: 50px;
-}
-
-input[type="text"] {
-  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  margin: 0 6px 6px 6px;
+  width: 200px;
 }
 .item input[type="checkbox"] {
   transform: scale(1.8) translateY(1px);
@@ -76,41 +108,12 @@ input[type="text"] {
   cursor: pointer;
   text-align: left;
 }
-/* .item-text input {
-  padding: 4px;
-} */
-.item-text {
-  font-size: 14px;
-  margin-bottom: 10 px;
-  display: inline-block;
-  text-align: left;
+
+.formTitile {
+  font_size: var(--title);
 }
 
-.listContainer {
-  border-radius: 25px;
-  border: 1px solid var(--black);
-  backdrop-filter: blur(10px);
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.item-actions {
-  text-align: right;
-  margin-bottom: 20px;
-  padding: 5px;
-}
-.item {
-  margin-left: 3px;
-  text-align: left;
-  padding-left: 20px;
-}
-
-.listContainer p {
-  text-align: center;
-  color: var(--blue);
-}
-
-.itemImage {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+hr {
+  padding-right: 200 px;
+  padding-left: 2000 px;
 }
