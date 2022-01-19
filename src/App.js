@@ -17,7 +17,6 @@ function App() {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/Shoppinglist" component={ShoppingListPage} />
-        
           </Switch>
         </div>
       </div>

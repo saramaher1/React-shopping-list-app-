@@ -10,7 +10,7 @@ const NavBar = () => (
                 <Link to="/">HomePage</Link>
             </li>
             <li>
-                <Link to="/shoppinglist">My Shoppping List</Link>
+                <Link to="/shoppinglist">EIKA Shoppping List</Link>
             </li>
            
         </ul>

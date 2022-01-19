@@ -12,8 +12,12 @@ const CompletedItems = ({completedItems}) => {
                        {
                          completedItems.map(item => (( item.completed)? 
                          <li key={item.id} className="list-group-item">
+
                          <img className="itemImage" src={item.Image} alt="url"/>
+                         <div>
                          {`${item.text}` }
+                         </div>
+                         
             
                          </li> 
                          :null))}

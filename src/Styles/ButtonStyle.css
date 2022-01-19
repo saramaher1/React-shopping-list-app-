@@ -1,10 +1,11 @@
-button {
-  padding: 10px 30px;
+button,
+.custom-file-input::before {
+  padding: 10px 10px;
   border-radius: 5px;
   background-color: hsla(201, 100%, 50%, 0.1);
   border: 1px solid hsl(201, 100%, 50%);
   outline: none;
-  color: white;
+  color: var(--white);
   font-weight: lighter;
   margin-top: 20px;
   cursor: pointer;
@@ -21,14 +22,13 @@ button:focus {
   visibility: hidden;
 }
 .custom-file-input::before {
-  content: " 📷";
+  content: " Select Item Image";
   display: inline-block;
-  outline: none;
-  white-space: nowrap;
   cursor: pointer;
-  width: 100%;
-  font-size: 40px;
-  margin-left: 100px;
+  width: 250px;
+  font-size: 10px;
+  text-align: center;
+  margin_botton: 30px;
 }
 .custom-file-input:hover::before {
   border-color: black;

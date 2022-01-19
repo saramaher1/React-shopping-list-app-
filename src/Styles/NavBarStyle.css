@@ -4,9 +4,11 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: hsla(201, 100%, 3%, 0.6);
+  background-color: hsla(201, 100%, 6%, 0.6);
 }
-
+ul {
+  list-style-type: none;
+}
 nav ul {
   text-align: center;
   list-style-type: none;

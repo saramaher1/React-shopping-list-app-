@@ -2,12 +2,10 @@ import React ,{useState}  from "react";
 import CompletedItems from "./CompletedItems";
 import Swal from 'sweetalert2';
 import alertPic from "../Assets/Images/alertPic.png";
-import additem from "../Assets/Images/additem .png";
-
 import { storage } from "../firebase";
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 
-import logo from '../Assets/logo/logo.png';
+
 const AddItems = () => {
      const [list, setList] = React.useState([]);
      const [item, setItem] = React.useState("");
@@ -38,7 +36,6 @@ function AlertHandler() {
       })
     }
      function handleSubmit(e) {
-      
        e.preventDefault();
        const newitem = {
          id: new Date().getTime(),
@@ -56,6 +53,7 @@ function AlertHandler() {
        let updatedList = [...list].filter((item) => item.id !== id);
        setList(updatedList);
      }
+  
  
      function toggleComplete(id) {
        let updatedList = [...list].map((item) => {
@@ -71,6 +69,7 @@ function AlertHandler() {
      // handling upload picture functions : 
      function handleChange(e) {
       setFile(e.target.files[0]);
+      
     }
   
     function handleUpload(e) {
@@ -85,80 +84,103 @@ function AlertHandler() {
             setURL(url);
           });
       });
-  
+      Swal.fire(" Your Picture has been uploaded !! ");
     }
  
+  
+  
      
 
      return (
       <div className="container">
         
-          <div className="AdditemsForm"> 
-          
-           <form className="Form" onSubmit={  handleUpload} >
+          <div className="AdditemsForm">
             
-             <div>
-            {/* <h3 className="formTitile">My shopping List </h3> */}
-              <span> 
-               <input
-                 className="InputBox"
-                 type="text" 
-                 placeholder="Enter the items"
-                 onChange={(e) => setItem(e.target.value)}
-                 value={item} />
-              </span>
-             
-              <span> 
-                <input
-                 className="InputBox"
-                 type="number"
-                 placeholder="Enter Price kr"
-                 onChange={(e) => 
-                 setItemPrice(e.target.value)}
-                 value={itemPrice} />
-              </span>
-
-              <div className="fileWarpper">
-              
-                     <input type="file" id="file" className="custom-file-input" onChange={handleChange} />
-              </div>
-
-             <div>
-               <button className="addItemIcon" color="var(--blue)" size={40} id="icons" disabled={!file} type="submit" onClick={handleSubmit} >Add Item</button>   
-              </div>
-              </div>
-
+            
+    <form className="uploadPicture" onSubmit={handleUpload}>
+            
+            <input type="file" id="file" className="custom-file-input" onChange={handleChange} /> 
+        
+         <button display="none" className="addItemIcon " color="var(--blue)" size={40} id="icons" disabled={!file} type="submit"   >Upload</button>   
             </form>
+          <div>
+          <form className="Form" onSubmit={handleSubmit} >
+            
+            <div>
+            <span> 
+              <input
+                className="InputBox"
+                type="text" 
+                placeholder="Enter the items"
+                onChange={(e) => setItem(e.target.value)}
+                value={item} />
+             </span>
+            
+             <span> 
+               <input
+                className="InputBox"
+                type="number"
+                placeholder="Enter Price kr"
+                onChange={(e) => 
+                setItemPrice(e.target.value)}
+                value={itemPrice} />
+             </span>
+
+<div>
+<button className="addItemIcon" color="var(--blue)" size={40} id="icons" type="submit"   >Add Item</button>          
+</div>
+
+             </div>
+           </form>
+          </div>
+              
+           
+         
       </div>
          <div className="listContainer"> 
-         <h3 className="formTitile">My shopping List </h3>
-           <p className="shoppingListParagraph">  </p>
+         <div>
+         <h4 className="shoppingListTitle"> My Shopping List :  </h4>
+
+         </div>
+          
+          
            {list.map((item) => (
             <div key={item.id} className="item">
              <div className="item-text">
-                 <span> 
+                  <span> 
                    <input
                     type="checkbox"
                      id="completed"
                      checked={item.completed}
                       onChange={() => toggleComplete(item.id)}/>
-                 </span>
-                 <span ><img className="itemImage" src={item.Image} alt="icon"/> </span>
-                 <span>{item.text}</span>
-                 <span>Price:{item.price} </span>
+                   </span>
+                   
+
+                     <span ><img className="itemImage" src={item.Image} alt="icon"/> </span>
+           
+                     <div>
+
+<span className="itemInfo"> {item.text}</span>
+<span className="itemInfo"> {item.price} Kr</span>
+</div>
+                   
+                   
+                 
                </div>
  
              <div className="item-actions">
                <RiDeleteBin5Fill  onClick={() => deleteitem(item.id)}/> 
+        
+              
              </div> 
            </div>
                ))}
           </div>
 
            <CompletedItems completedItems={list}  />
+     
         </div>     
-        
-
+    
      );
 };
 

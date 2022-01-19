@@ -1,9 +1,14 @@
 @media screen and (min-width: 1000px) {
+  .listContainer {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .itemImage {
+    height: 80px;
+    width: 80px;
+  }
 }
 @media screen and (max-width: 350px) {
-  .container {
-    background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\nii-shu-ZpbtNpPG8_4-unsplash.png");
-  }
   nav a {
     padding: 5px 8px;
   }
@@ -15,12 +20,15 @@
     margin-top: 40px;
     height: 130px;
   }
-  form button {
-    margin-top: 10px;
-  }
+
   .InputBox {
     text-align: center;
-    margin-top: 3px;
-    width: 220px;
+    margin-top: 4px;
+    width: 200px;
+    margin-left: 30px;
+  }
+  .homePageContainer {
+    width: 50%;
+    margin-left: 10%;
   }
 }

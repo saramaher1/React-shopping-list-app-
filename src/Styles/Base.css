@@ -15,11 +15,11 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
-  color: var(--white);
   text-align: center;
-  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\augustine-wong-3Om4DHcaAc0-unsplash.jpg");
+  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\neonbrand-Ak5c5VTch5E-unsplash.jpg");
   height: 100vh;
   width: 100%;
+  color: var(--white);
   background-size: cover;
   background-position: center;
 }
@@ -52,44 +52,44 @@ body {
 .grid-container > div {
   text-align: center;
 }
-.clickMe {
-  padding: 30px;
-}
-.clickMe button {
-  width: 300 px;
-}
-/* Styling Shoppinglistpage */
-.homePageParagraph {
-  margin-top: 50px;
-  font-size: var(--title);
-  text-align: center;
-}
-.homePageParagraph p {
-  padding-top: 50px;
-}
-
 .container {
-  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\nii-shu-ZpbtNpPG8_4-unsplash (1).png");
-  height: 100vh;
+  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\ikea-shopping-guide-entity-1320x720 (4).png");
+  height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
+.homePageContainer,
 .AdditemsForm {
-  background-color: hsla(201, 100%, 6%, 0.6);
-  border-radius: 25px;
+  background-color: hsla(201, 100%, 10%, 0.5);
   text-align: center;
-  padding-top: 100px;
+  border-radius: 25px;
+}
+
+/* Styling Shoppinglistpage */
+.homePageContainer {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.homePageParagraph {
+  text-align: center;
+  padding: 50px 0px;
+  margin-top: 200px;
+}
+
+.clickMeHomePage {
+  padding-bottom: 50px;
+}
+
+.AdditemsForm {
+  padding-top: 60px;
   padding-bottom: 20px;
-  align-items: center;
 }
-.listContainer {
-  background-color: hsla(201, 100%, 6%, 0.6);
-  text-align: center;
-  border-radius: 25px;
-}
+
+/* Styling Shopping List Page : */
+/* Styling InputBox : */
 .InputBox {
-  background-color: hsl(200, 100%, 92%, 0.86);
+  background-color: hsl(200, 100%, 95%, 0.99);
   border: 1px solid hsl(201, 100%, 6%);
   outline: none;
   border-radius: 5px;
@@ -99,7 +99,7 @@ body {
   border-radius: 5px;
   border: none;
   padding: 6px;
-  margin: 0 6px 6px 6px;
+  margin: 6px 6px 6px 6px;
   width: 200px;
 }
 .item input[type="checkbox"] {
@@ -107,13 +107,33 @@ body {
   margin: 0 16px 0 0;
   cursor: pointer;
   text-align: left;
+  margin-left: 20px;
+  float: left;
+  margin-top: 45px;
 }
 
-.formTitile {
-  font_size: var(--title);
+.itemImage {
+  height: 70px;
+  width: 70px;
+  margin-right: 45px;
 }
 
-hr {
-  padding-right: 200 px;
-  padding-left: 2000 px;
+.shoppingListTitle {
+  font-weight: bold;
+}
+
+.listContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.item-text,
+.list-group {
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 1px solid;
+  padding: 5px;
+}
+.list-group-item img {
+  margin-left: 40px;
 }

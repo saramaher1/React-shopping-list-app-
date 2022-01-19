@@ -5,11 +5,11 @@ import NavBar from "../components/NavBar";
 const  ShoppingListPage = () => {
    
 return( 
-<div className ="grid-container">
-     <div className="Header">
+<div >
+     <div>
           <NavBar />
      </div>
-     <div className="Main"> 
+     <div > 
           <AddItem  />
         
      </div>
