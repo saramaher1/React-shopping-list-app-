@@ -1,0 +1,42 @@
+nav {
+  border-bottom: 3px solid var(--yellow);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: hsla(201, 100%, 6%, 0.6);
+}
+ul {
+  list-style-type: none;
+}
+nav ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  padding: 16px 16px;
+}
+
+nav a:hover {
+  background: var(--yellow);
+  color: var(--white);
+}
+
+.logo {
+  width: 60px;
+  height: 40px;
+  padding-top: 4px;
+  float: left;
+}

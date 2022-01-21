@@ -18,6 +18,7 @@ const CompletedItems = ({completedItems}) => {
                          {`${item.text}` }
                          </div>
                          
+            
                          </li> 
                          :null))}
                      </ul>

@@ -1,0 +1,60 @@
+button,
+.custom-file-input::before {
+  padding: 16px;
+  border-radius: 5px;
+  background-color: hsla(201, 100%, 50%, 0.1);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  color: var(--white);
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(201, 100%, 50%, 0.3);
+}
+
+button:focus {
+  background-color: hsla(201, 100%, 50%, 0.5);
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: " Select Item Image";
+  display: inline-block;
+  cursor: pointer;
+  width: 250px;
+  font-size: 10px;
+  text-align: center;
+  margin_botton: 30px;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input {
+  text-align: center;
+}
+.InputBox {
+  background-color: hsl(200, 100%, 95%, 0.99);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: lighter;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  margin: 6px 6px 6px 6px;
+  width: 200px;
+}
+.item input[type="checkbox"] {
+  transform: scale(1.8) translateY(1px);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+  text-align: left;
+  margin-left: 20px;
+  float: left;
+  margin-top: 45px;
+}
