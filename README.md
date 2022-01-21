@@ -44,7 +44,7 @@ Open http://localhost:3000 to view it in the browser.
 
 3 - Choose picture for your item 
 
-# 4- Dont forget to press Upload button.
+ 4 - Dont forget to press Upload button.
 
 5- enter item name .
 
