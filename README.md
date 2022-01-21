@@ -1,6 +1,15 @@
 
 ### EIKA SHOPPING LIST APP :  
+https://fir-react-upload-db0b1.web.app/
+
+
 <img width="950" alt="Screenshot (22)" src="https://user-images.githubusercontent.com/79480685/150574109-56f4facb-3ea5-43b4-95e3-5761a93729ad.png">
+
+
+![localhost_3000_(iPhone 12 Pro) (1)](https://user-images.githubusercontent.com/79480685/150575540-d158bc1f-24bc-4083-9f11-d80438834812.png)
+
+![localhost_3000_(iPhone 12 Pro)](https://user-images.githubusercontent.com/79480685/150575584-fb98d010-21cc-4342-9293-7e16911a98a8.png)
+
 ## Discription : 
  EIKA Shopping list APP is WebSite for Organizing your shoppingList  items in EIKA ,  you Can Add Item name And Price 
 also You can Add image for your Item . 
@@ -26,6 +35,42 @@ npm start
 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
+
+## How To Use The App : 
+1- open on your broswer the link : https://fir-react-upload-db0b1.web.app/
+
+2- press the button Try it .
+
+
+
+<img width="955" alt="Screenshot (21)" src="https://user-images.githubusercontent.com/79480685/150575076-10bf507d-8851-45c1-9806-986eca72c12f.png">
+
+
+3 - Choose picture for your item 
+
+# 4- Dont forget to press Upload button.
+
+5- enter item name .
+
+6 - enter item Price.
+
+7- Enjoy seeing your shopping list .
+
+
+<img width="941" alt="Screenshot (24)" src="https://user-images.githubusercontent.com/79480685/150574929-caec41f5-f012-4591-ad2f-532be424094f.png">
+
+8- Check the checkbox if you are done from your item .
+
+
+<img width="942" alt="Screenshot (25)" src="https://user-images.githubusercontent.com/79480685/150575272-7588b038-750e-4667-a1c6-b7b479e1c78b.png">
+
+
+
+
+9- press show completed item to see list of your completed item :D 
+
+
+<img width="946" alt="Screenshot (26)" src="https://user-images.githubusercontent.com/79480685/150575415-21e63783-cf92-444d-9b04-0ae25e22bd3f.png">
 
 
 
