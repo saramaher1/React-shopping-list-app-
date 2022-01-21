@@ -9,6 +9,7 @@
   --white: #ffffff;
   --gray: #e3e3e3;
   --black: #000000;
+  --darkBlue: #0b1c4a;
   --paragraph: 14px;
   --title: 25px;
 }
@@ -16,54 +17,25 @@
 body {
   font-family: "Noto Sans", sans-serif;
   text-align: center;
-  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\neonbrand-Ak5c5VTch5E-unsplash.jpg");
-  height: 100vh;
-  width: 100%;
+  background-color: var(--darkBlue);
   color: var(--white);
-  background-size: cover;
-  background-position: center;
 }
 /* header in homePage */
 
 /* Styling HomePage  */
 
+.AdditemsForm,
+.homePageParagraph {
+  background-color: hsla(201, 100%, 6%, 0.6);
+  text-align: center;
+  border-radius: 60px;
+}
+.homePageParagraph {
+  padding: 50px 0px;
+}
 .homePageImage {
-  text-align: center;
-  height: 300px;
-  width: 300;
-  margin-top: 100px;
-}
-
-.Header {
-  grid-area: header;
-}
-/* the main page in homePage */
-.Main {
-  grid-area: main;
-}
-.grid-container {
-  display: grid;
-  font-family: "Noto Sans", sans-serif;
-  grid-template-areas:
-    "header header header header header header"
-    "main main main main main main "
-    "footer footer footer footer footer footer";
-}
-.grid-container > div {
-  text-align: center;
-}
-.container {
-  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\ikea-shopping-guide-entity-1320x720 (4).png");
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.homePageContainer,
-.AdditemsForm {
-  background-color: hsla(201, 100%, 10%, 0.5);
-  text-align: center;
-  border-radius: 25px;
+  height: 350px;
+  width: 300px;
 }
 
 /* Styling Shoppinglistpage */
@@ -73,8 +45,7 @@ body {
 }
 .homePageParagraph {
   text-align: center;
-  padding: 50px 0px;
-  margin-top: 200px;
+  padding: 70px 0px;
 }
 
 .clickMeHomePage {
@@ -84,32 +55,6 @@ body {
 .AdditemsForm {
   padding-top: 60px;
   padding-bottom: 20px;
-}
-
-/* Styling Shopping List Page : */
-/* Styling InputBox : */
-.InputBox {
-  background-color: hsl(200, 100%, 95%, 0.99);
-  border: 1px solid hsl(201, 100%, 6%);
-  outline: none;
-  border-radius: 5px;
-  color: black;
-  font-weight: lighter;
-  text-align: center;
-  border-radius: 5px;
-  border: none;
-  padding: 6px;
-  margin: 6px 6px 6px 6px;
-  width: 200px;
-}
-.item input[type="checkbox"] {
-  transform: scale(1.8) translateY(1px);
-  margin: 0 16px 0 0;
-  cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
-  float: left;
-  margin-top: 45px;
 }
 
 .itemImage {
@@ -136,4 +81,17 @@ body {
 }
 .list-group-item img {
   margin-left: 40px;
+}
+.list-group,
+.container {
+  background-color: var(--darkBlue);
+}
+
+.Warpper {
+  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\ikea-shopping-guide-entity-1320x720 (4).png");
+  height: 100vh;
+  width: 100vw;
+  color: var(--white);
+  background-size: cover;
+  background-position: center;
 }

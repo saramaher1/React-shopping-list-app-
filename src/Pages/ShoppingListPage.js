@@ -1,6 +1,5 @@
 import React from "react";
-import AddItem from "../components/AddItem";
-import twoLady from"../Assets/Images/twoLady.png";
+import ShoppingItems from "../components/ShoppingItems";
 import NavBar from "../components/NavBar";
 const  ShoppingListPage = () => {
    
@@ -10,8 +9,7 @@ return(
           <NavBar />
      </div>
      <div > 
-          <AddItem  />
-        
+          <ShoppingItems  />
      </div>
 </div>
 );
