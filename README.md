@@ -1,3 +1,35 @@
+
+### EIKA SHOPPING LIST APP :  
+
+## Discription : 
+ EIKA Shopping list APP is WebSite for Organizing your shoppingList  items in EIKA ,  you Can Add Item name And Price 
+also You can Add image for your Item . 
+if You are done from this item you can check it with the checkbox that as completed and you can See your list of completed item  :)) 
+  ## Features :
+  ِ1- Adding item and display it in list . 📝
+  2- Add price to you item .
+  3 - Add Picture to your item .📷 
+  4 - See Your completed items .
+  5- enjoy your website on computer and mobile (  fully Responsive ) 💻 📱
+  
+## Installation : 
+Step 1 🍴 Fork this repo!
+
+Step 2 👯 Clone this repo to your local machine.
+
+Step 3 HACK AWAY! 🔨🔨🔨
+
+Available Scripts
+In the project directory, you can run:
+
+npm start
+
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
