@@ -70,7 +70,8 @@ Open http://localhost:3000 to view it in the browser.
 
 10-opem the website on your mobile and enjoy the features 
 
-<img width="575" alt="localhost_3000_(iPhone 12 Pro) (1)" src="https://user-images.githubusercontent.com/79480685/150575864-ded79da3-1efe-4551-b8cb-e4c3bfafbf64.png">
+<img width="150" alt="localhost_3000_(iPhone 12 Pro) (1)" src="https://user-images.githubusercontent.com/79480685/150576107-be011513-5ab1-4fa2-be84-4a008febb149.png">
+
 
 <img width="150" alt="localhost_3000_(iPhone 12 Pro)" src="https://user-images.githubusercontent.com/79480685/150575941-362412e1-d1ce-4780-bf46-4844e3e7527e.png">
 
