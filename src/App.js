@@ -1,13 +1,12 @@
-import React from 'react';
-import '../src/styles/Base.css';
-import '../src/styles/NavBarStyle.css';
-import '../src/styles/ResponsiveStyle.css';
-import '../src/styles/ButtonStyle.css';
+import React from "react";
+import "./Styles/Base.css";
+import "./Styles/NavBarStyle.css";
+import "./Styles/ResponsiveStyle.css";
+import "./Styles/ButtonStyle.css";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from "./pages/HomePage";
-import ShoppingListPage from "./pages/ShoppingListPage";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import ShoppingListPage from "./Pages/ShoppingListPage";
 
 function App() {
   return (
