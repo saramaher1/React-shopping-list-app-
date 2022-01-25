@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* CSS -1 This page-body should not exist, you can replace the styles on <div> "App" instead */}
         <div id="page-body">
           <Switch>
             <Route path="/" exact component={HomePage} />

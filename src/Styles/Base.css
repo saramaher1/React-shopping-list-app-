@@ -83,13 +83,13 @@ body {
 .list-group-item img {
   margin-left: 40px;
 }
-.list-group,
+.list-group,  
 .container {
   background-color: var(--darkBlue);
 }
 
 .Warpper {
-  background-image: url("C:\Users\Sara\OneDrive\Desktop\shopping-list-app\src\Assets\Images\ikea-shopping-guide-entity-1320x720 (4).png");
+  background-image: url("../Assets/Images/ikea-shopping-guide-entity-1320x720\ \(3\).png");
   height: 100vh;
   width: 100vw;
   color: var(--white);
