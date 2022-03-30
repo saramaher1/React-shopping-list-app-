@@ -18,11 +18,11 @@ if You are done from this item you can check it with the checkbox that as comple
   5- enjoy your website on computer and mobile (  fully Responsive ) 💻 📱
   
 ## Installation : 
-Step 1 🍴 Fork this repo!
 
-Step 2 👯 Clone this repo to your local machine.
 
-Step 3 HACK AWAY! 🔨🔨🔨
+Step 1 👯 Clone this repo to your local machine.
+
+Step 2 HACK AWAY! 🔨🔨🔨
 
 Available Scripts
 In the project directory, you can run:
